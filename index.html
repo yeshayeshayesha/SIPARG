@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="meal.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="topcont">
+            <div class="menu-bar">
+                <div class="plogo">
+
+                </div>
+                <div class="mealselect">
+                    <button onclick="redirectMeal()" id="button1" class="buttonss">MEALS</button>
+                </div>
+                <div class="snackselect">
+                    <button onclick="redirectSnack()" id="button2" class="buttonss">SNACKS</button>
+                </div>
+                <div class="drinkselect">
+                    <button onclick="redirectDrink()" id="button3" class="buttonss">DRINKS</button>
+                </div>
+            </div>
+           
+            <div class="selection">
+                <div class="row1">
+                    <div class="m1">
+                        <button onclick="orderItem('tacos', 60)">ORDER</button>
+                        <pP>60</p>
+                    </div>
+                    <div class="m2">
+                        <button onclick="orderItem('pizza', 50)">ORDER</button>
+                        <p>P50</p>
+                    </div>
+                </div>
+               
+                <div class="row2">
+                    <div class="m3">
+                        <button onclick="orderItem('chicken', 30)">ORDER</button>
+                        <p>30</p>
+                    </div>
+                    <div class="m4">
+                        <button onclick="orderItem('burgers', 40)">ORDER</button>
+                        <p>40</p>
+                    </div>
+                </div>
+
+                <div class="row3">
+                    <div class="m5">
+                        <button onclick="orderItem('quesadilla', 60)">ORDER</button>
+                        <p>60</p>
+                    </div>
+                    <div class="m6">
+                        <button onclick="orderItem('fish', 20)">ORDER</button>
+                        <p>20</p>
+                    </div>
+                </div>
+
+                <div class="row4">
+                    <div class="m7">
+                        <button onclick="orderItem('caldereta', 60)">ORDER</button>
+                        <p>60</p>
+                    </div>
+                    <div class="m8">
+                        <button onclick="orderItem('bulalo', 40)">ORDER</button>
+                        <p>40</p>
+                    </div>
+                </div>
+
+                <div class="row5">
+                    <div class="m9">
+                        <button onclick="orderItem('sandwhich', 50)">ORDER</button>
+                        <p>50</p>
+                    </div>
+                    <div class="m10">
+                        <button onclick="orderItem('chicken tenders', 50)">ORDER</button>
+                        <p>50</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="totalbar">
+            <button onclick="redirectTotal()">PAY NOW</button>
+            <div id="totalarea">
+                <h2>Your Order</h2>
+                <ul id="orderList">
+                </ul>
+                <p>Total: <span id="total">0</span> pesos</p>
+        </div>
+    </div>
+</body>
+</html>
