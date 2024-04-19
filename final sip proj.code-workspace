@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../prototype for sip"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "final sip proj"
+	}
+}

@@ -1,10 +1,80 @@
+var total = 0; // Initialize total variable outside the function
 
-
-let total = 0;
-function orderItem(item, price){
+/*function orderItem(item, price){
     total += price;
-    document.getElementById('total').textContent = total;  
-
+    document.getElementById('orderList').innerHTML += `<li>${item} - $${price}</li>`;
+    document.getElementById('total').textContent = total.toFixed(2); // Use toFixed to display total with two decimal places
+    document.getElementById('totaldisplay').textContent = total.toFixed(2); // Update totaldisplay with the new total
+    return;
 }
 
-document.getElementById('orderList').innerHTML += `<li>${item} - $${price}</li>`;
+function redirectMeal(){
+    window.location.href = "index.html"; 
+}
+
+function redirectSnack(){
+        window.location.href = "snacks.html"; 
+}
+
+function redirectDrink(){
+  window.location.href = "drinks.html";
+}
+
+let total = 0;
+let items = [];
+
+function orderItem(item, price) {
+  total += price;
+  /*items.push({ item: item, price: price });
+  document.getElementById('orderList').innerHTML += `<li>${item} - $${price}</li>`;
+  document.getElementById('total').textContent = total;
+}
+
+function redirectToCheckout() {
+  // Store total and items in sessionStorage
+  sessionStorage.setItem('total', total);
+  sessionStorage.setItem('items', JSON.stringify(items));
+
+  // Redirect to checkout.html
+  window.location.href = 'checkout.html';
+}**/
+
+var redirect = document.getElementById("button1");
+var redirect2 = document.getElementById("")
+redirect.addEventListener("click", function(){
+  window.location.href = "index.html";
+  console.log("hello guys");
+});
+
+function redirectSnack(){
+  window.location.replace("snacks.html"); 
+}
+
+function redirectDrink(){
+  window.location.href = 'drinks.html';
+}
+
+let total = 0;
+let items = [];
+
+function orderItem(item, price) {
+  /*total += price;
+  items.push({ item: item, price: price });
+  document.getElementById('orderList').innerHTML += `<li>${item} - $${price}</li>`;
+  document.getElementById('total').textContent = total;*/
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push({ item, price });
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+
+function redirectToCheckout() {
+  // Store total and items in sessionStorage
+  sessionStorage.setItem('total', total);
+  sessionStorage.setItem('items', JSON.stringify(items));
+
+  // Redirect to checkout.html
+  window.location.href = "checkout.html";
+}
+
+

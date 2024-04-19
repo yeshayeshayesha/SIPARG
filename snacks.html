@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="meal.css">
+    <link rel="stylesheet" href="snack.css">
     <script src="script.js"></script>
- 
+   
 </head>
 <body>
     <div class="container">
@@ -16,73 +16,74 @@
 
                 </div>
                 <div class="mealselect">
-                    <button id="button1" class="buttonss">MEALS</button>
+                    <button onclick="redirectMeal()" id="button1" class="buttonss">MEALS</button>
                 </div>
                 <div class="snackselect">
-                    <button id="button2" class="buttonss">SNACKS</button>
+                    <button onclick="redirectSnack()" id="button2" class="buttonss">SNACKS</button>
                 </div>
                 <div class="drinkselect">
-                    <button id="button3" class="buttonss">DRINKS</button>
+                    <button onclick="redirectDrink()" id="button3" class="buttonss">DRINKS</button>
                 </div>
             </div>
            
             <div class="selection">
                 <div class="row1">
                     <div class="m1">
-                        <button onclick="orderItem('tacos', 60)">ORDER</button>
+                        <button onclick="orderItem('cupcakes', 60)">ORDER</button>
                         <pP>60</p>
                     </div>
                     <div class="m2">
-                        <button onclick="orderItem('pizza', 50)">ORDER</button>
+                        <button onclick="orderItem('fries', 50)">ORDER</button>
                         <p>P50</p>
                     </div>
                 </div>
                
                 <div class="row2">
                     <div class="m3">
-                        <button onclick="orderItem('chicken', 30)">ORDER</button>
+                        <button onclick="orderItem('waffles', 30)">ORDER</button>
                         <p>30</p>
                     </div>
                     <div class="m4">
-                        <button onclick="orderItem('burgers', 40)">ORDER</button>
+                        <button onclick="orderItem('churros', 40)">ORDER</button>
                         <p>40</p>
                     </div>
                 </div>
 
                 <div class="row3">
                     <div class="m5">
-                        <button onclick="orderItem('quesadilla', 60)">ORDER</button>
+                        <button onclick="orderItem('skyflakes', 60)">ORDER</button>
                         <p>60</p>
                     </div>
                     <div class="m6">
-                        <button onclick="orderItem('fish', 20)">ORDER</button>
+                        <button onclick="orderItem('candy', 20)">ORDER</button>
                         <p>20</p>
                     </div>
                 </div>
 
                 <div class="row4">
                     <div class="m7">
-                        <button onclick="orderItem('caldereta', 60)">ORDER</button>
+                        <button onclick="orderItem('ice cream', 60)">ORDER</button>
                         <p>60</p>
                     </div>
                     <div class="m8">
-                        <button onclick="orderItem('bulalo', 40)">ORDER</button>
+                        <button onclick="orderItem('cake', 40)">ORDER</button>
                         <p>40</p>
                     </div>
                 </div>
 
                 <div class="row5">
                     <div class="m9">
-                        <button onclick="orderItem('sandwhich', 50)">ORDER</button>
+                        <button onclick="orderItem('turron', 50)">ORDER</button>
                         <p>50</p>
                     </div>
                     <div class="m10">
-                        <button onclick="orderItem('chicken tenders', 50)">ORDER</button>
+                        <button onclick="orderItem('hotdog', 50)">ORDER</button>
                         <p>50</p>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <div id="totalbar">
             <h2>Your Order</h2>
@@ -92,9 +93,6 @@
             <button onclick="redirectToCheckout()">PAY NOW</button>
         </div>
     </div>
-
-
-
 
 </body>
 </html>
