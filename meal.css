@@ -8,7 +8,6 @@
 }
 
 .menu-bar{
-   
     top: 0;
     left: 0;
     height: 100%;
@@ -18,12 +17,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: fixed;
 }
 
 .selection {
 
     position: relative;
-    left: 45vh;
+    left: 60vh;
+    top: 30vh;
+    padding: 15px;
+    justify-content: space-evenly;
+    display: flex;
     
 }
 
@@ -40,7 +44,90 @@
 
 .totalbar{
     background-color:  #FFA740 ;
+    width: 15vw;
+    padding: 10px;
     position: fixed;
-    
+    left: 148vh;
+    bottom: 3vh;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
 
+}
+
+.row1{
+    padding: 15px;
+}
+
+.row2{
+    padding: 15px;
+}
+
+.row3{
+    padding: 15px;
+}
+
+.row4{
+    padding: 15px;
+}
+
+.row5{
+    padding: 15px;
+}
+
+
+.m1{
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.m2{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.m3{
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.m4{
+    border: 1px solid black;
+    padding: 15px;
+
+}
+
+.m5{
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.m6{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.m7{
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.m8{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.m9{
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.m10{
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 30px;
 }

@@ -21,10 +21,9 @@
       cartItems.innerHTML = '';
       cart.forEach(item => {
         total += item.price;
-        cartItems.innerHTML += `<li>${item.item} - $${item.price}</li>`;
+        cartItems.innerHTML += `<li>${item.item} - $${item.price}</li>` + buttonCreation();
       });
 
-      console.log(total);
       document.getElementById('total').innerText = `Total: $${total}`;
     }
 
@@ -36,6 +35,13 @@
       // Clear the cart after checkout
       localStorage.removeItem('cart');
       renderCart(); // Update the cart display
+      var fulltotal = localStorage.getItem("fulltotalests");
+      fulltotal = 0;
+      localStorage.setItem("fulltotalests", fulltotal);
+
+      var fullorderlist = localStorage.getItem("fullorderList");
+      fullorderlist = "";
+      localStorage.setItem("fullorderList", fullorderlist);
     }
 
     window.onload = renderCart();

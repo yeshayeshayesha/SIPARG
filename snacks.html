@@ -29,56 +29,75 @@
             <div class="selection">
                 <div class="row1">
                     <div class="m1">
-                        <button onclick="orderItem('cupcakes', 60)">ORDER</button>
-                        <pP>60</p>
+                        <p>60 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Cupcakes', 60)">ORDER</button>
+                        
                     </div>
                     <div class="m2">
-                        <button onclick="orderItem('fries', 50)">ORDER</button>
-                        <p>P50</p>
+                        <p>50 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Fries', 50)">ORDER</button>
+                        
                     </div>
                 </div>
                
                 <div class="row2">
                     <div class="m3">
-                        <button onclick="orderItem('waffles', 30)">ORDER</button>
-                        <p>30</p>
+                        <p>30 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Waffles', 30)">ORDER</button>
+                        
                     </div>
                     <div class="m4">
-                        <button onclick="orderItem('churros', 40)">ORDER</button>
-                        <p>40</p>
+                        <p>40 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Churros', 40)">ORDER</button>
+                        
                     </div>
                 </div>
 
                 <div class="row3">
                     <div class="m5">
-                        <button onclick="orderItem('skyflakes', 60)">ORDER</button>
-                        <p>60</p>
+                        <p>60 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Skyflakes', 60)">ORDER</button>
+                       
                     </div>
                     <div class="m6">
-                        <button onclick="orderItem('candy', 20)">ORDER</button>
-                        <p>20</p>
+                        <p>20 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Candy', 20)">ORDER</button>
+                        
                     </div>
                 </div>
 
                 <div class="row4">
                     <div class="m7">
-                        <button onclick="orderItem('ice cream', 60)">ORDER</button>
-                        <p>60</p>
+                        <p>60 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Ice Cream', 60)">ORDER</button>
+                        
                     </div>
                     <div class="m8">
-                        <button onclick="orderItem('cake', 40)">ORDER</button>
-                        <p>40</p>
+                        <p>40 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Cake', 40)">ORDER</button>
+                        
                     </div>
                 </div>
 
                 <div class="row5">
                     <div class="m9">
-                        <button onclick="orderItem('turron', 50)">ORDER</button>
-                        <p>50</p>
+                        <p>50 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Turron', 50)">ORDER</button>
+                        
                     </div>
                     <div class="m10">
-                        <button onclick="orderItem('hotdog', 50)">ORDER</button>
-                        <p>50</p>
+                        <p>50 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button onclick="orderItem('Hotdog', 50)">ORDER</button>
                     </div>
                 </div>
             </div>
@@ -86,10 +105,11 @@
 
 
         <div id="totalbar">
-            <h2>Your Order</h2>
+            <h2>Your Order:</h2>
             <ul id="orderList">
             </ul>
-            <p>Total: $<span id="total">0</span></p>
+            <br>
+            <p>Total: <span id="total">0</span> pesos</p>
             <button onclick="redirectToCheckout()">PAY NOW</button>
         </div>
 
@@ -100,6 +120,11 @@
                 var fulltotal = localStorage.getItem("fulltotalests");
 
                 document.getElementById("total").innerHTML = fulltotal;
+                total = Number(fulltotal);
+
+                var ordertotal = localStorage.getItem("fullorderList");
+
+                document.getElementById("orderList").innerHTML = ordertotal;
             }
         </script>
     </div>

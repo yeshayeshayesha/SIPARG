@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="meal.css">
     <script src="script.js"></script>
- 
 </head>
 <body>
     <div class="container">
@@ -25,82 +24,101 @@
                     <button onclick="redirectDrink()" id="button3" class="buttonss">DRINKS</button>
                 </div>
             </div>
-           
+            
             <div class="selection">
                 <div class="row1">
                     <div class="m1">
-                        <button onclick="orderItem('tacos', 60)">ORDER</button>
-                        <pP>60</p>
+                        <p>60 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button class="btn" onclick="orderItem('Tacos', 60)">ORDER</button>
                     </div>
                     <div class="m2">
-                        <button onclick="orderItem('pizza', 50)">ORDER</button>
-                        <p>P50</p>
+                        <p>50 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button class="btn" onclick="orderItem('Pizza', 50)">ORDER</button>
                     </div>
                 </div>
                
                 <div class="row2">
-                    <div class="m3">
-                        <button onclick="orderItem('chicken', 30)">ORDER</button>
-                        <p>30</p>
+                    <div class="m3">   
+                        <p>30 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br> 
+                        <button class="btn" onclick="orderItem('Chicken', 30)">ORDER</button>
                     </div>
                     <div class="m4">
-                        <button onclick="orderItem('burgers', 40)">ORDER</button>
-                        <p>40</p>
+                        <p>40 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button class="btn" onclick="orderItem('Burgers', 40)">ORDER</button>
                     </div>
                 </div>
 
                 <div class="row3">
                     <div class="m5">
-                        <button onclick="orderItem('quesadilla', 60)">ORDER</button>
-                        <p>60</p>
+                        <p>60 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button class="btn" onclick="orderItem('Quesadilla', 60)">ORDER</button>
                     </div>
                     <div class="m6">
-                        <button onclick="orderItem('fish', 20)">ORDER</button>
-                        <p>20</p>
+                        <p>20 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br> 
+                        <button class="btn" onclick="orderItem('Fish', 20)">ORDER</button>
                     </div>
                 </div>
 
                 <div class="row4">
                     <div class="m7">
-                        <button onclick="orderItem('caldereta', 60)">ORDER</button>
-                        <p>60</p>
+                        <p>60 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button class="btn" onclick="orderItem('Caldereta', 60)">ORDER</button>
                     </div>
                     <div class="m8">
-                        <button onclick="orderItem('bulalo', 40)">ORDER</button>
-                        <p>40</p>
+                        <p>40 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button class="btn" onclick="orderItem('Bulalo', 40)">ORDER</button>
                     </div>
                 </div>
 
                 <div class="row5">
                     <div class="m9">
-                        <button onclick="orderItem('sandwhich', 50)">ORDER</button>
-                        <p>50</p>
+                        <p>50 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br>
+                        <button class="btn" onclick="orderItem('Sandwich', 50)">ORDER</button>
                     </div>
                     <div class="m10">
-                        <button onclick="orderItem('chicken tenders', 50)">ORDER</button>
-                        <p>50</p>
+                        <p>50 Pesos</p>
+                        <img class="foodpics" src="images.jpg" alt="lmao" width="40"><br> 
+                        <button class="btn" onclick="orderItem('Chicken Tenders', 50)">ORDER</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="totalbar">
-            <h2>Your Order</h2>
-            <ul id="orderList">
-            </ul>
-            <p>Total: $<span id="total">0</span></p>
-            <button onclick="redirectToCheckout()">PAY NOW</button>
+        <div class="totalbar">
+            
+            <div id="totalarea">
+                <h2>Your Order:</h2>
+                <ul id="orderList">
+                </ul>
+                <br>
+                <p>Total: <span id="total">0</span> pesos</p>
+                <button onclick="redirectToCheckout()">PAY NOW</button>
+            </div> 
         </div>
+        
+        <script>
+            window.onload = displaytotal();
+
+            function displaytotal(){
+                var fulltotal = localStorage.getItem("fulltotalests");
+
+                document.getElementById("total").innerHTML = fulltotal;
+                total = Number(fulltotal);
+
+                var ordertotal = localStorage.getItem("fullorderList");
+
+                document.getElementById("orderList").innerHTML = ordertotal;
+            }
+        </script>
     </div>
-
-    <script>
-        window.onload = displaytotal();
-
-        function displaytotal(){
-            var fulltotal = localStorage.getItem("fulltotalests");
-
-            document.getElementById("total").innerHTML = fulltotal;
-        }
-    </script>
 </body>
 </html>
