@@ -92,6 +92,16 @@
             <p>Total: $<span id="total">0</span></p>
             <button onclick="redirectToCheckout()">PAY NOW</button>
         </div>
+
+        <script>
+            window.onload = displaytotal();
+
+            function displaytotal(){
+                var fulltotal = localStorage.getItem("fulltotalests");
+
+                document.getElementById("total").innerHTML = fulltotal;
+            }
+        </script>
     </div>
 
 </body>

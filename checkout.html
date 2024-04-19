@@ -23,6 +23,8 @@
         total += item.price;
         cartItems.innerHTML += `<li>${item.item} - $${item.price}</li>`;
       });
+
+      console.log(total);
       document.getElementById('total').innerText = `Total: $${total}`;
     }
 
@@ -36,7 +38,7 @@
       renderCart(); // Update the cart display
     }
 
-    window.onload = renderCart;
+    window.onload = renderCart();
   </script>
 </body>
 </html>

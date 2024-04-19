@@ -16,13 +16,13 @@
 
                 </div>
                 <div class="mealselect">
-                    <button id="button1" class="buttonss">MEALS</button>
+                    <button onclick="redirectMeal()" id="button1" class="buttonss">MEALS</button>
                 </div>
                 <div class="snackselect">
-                    <button id="button2" class="buttonss">SNACKS</button>
+                    <button onclick="redirectSnack()" id="button2" class="buttonss">SNACKS</button>
                 </div>
                 <div class="drinkselect">
-                    <button id="button3" class="buttonss">DRINKS</button>
+                    <button onclick="redirectDrink()" id="button3" class="buttonss">DRINKS</button>
                 </div>
             </div>
            
@@ -93,8 +93,14 @@
         </div>
     </div>
 
+    <script>
+        window.onload = displaytotal();
 
+        function displaytotal(){
+            var fulltotal = localStorage.getItem("fulltotalests");
 
-
+            document.getElementById("total").innerHTML = fulltotal;
+        }
+    </script>
 </body>
 </html>

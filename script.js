@@ -39,29 +39,30 @@ function redirectToCheckout() {
   window.location.href = 'checkout.html';
 }**/
 
-var redirect = document.getElementById("button1");
-var redirect2 = document.getElementById("")
-redirect.addEventListener("click", function(){
-  window.location.href = "index.html";
-  console.log("hello guys");
-});
+function redirectMeal(){
+  window.location.href = "index.html"; 
+}
 
 function redirectSnack(){
-  window.location.replace("snacks.html"); 
+  var fulltotal = document.getElementById("total").innerHTML;
+  localStorage.setItem("fulltotalests", fulltotal);
+  window.location.replace("snacks.html");
 }
 
 function redirectDrink(){
+  var fulltotal = document.getElementById("total").innerHTML;
+  localStorage.setItem("fulltotalests", fulltotal);
   window.location.href = 'drinks.html';
 }
 
-let total = 0;
+total = 0;
 let items = [];
 
 function orderItem(item, price) {
-  /*total += price;
+  total += price;
   items.push({ item: item, price: price });
   document.getElementById('orderList').innerHTML += `<li>${item} - $${price}</li>`;
-  document.getElementById('total').textContent = total;*/
+  document.getElementById('total').textContent = total;
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.push({ item, price });
   localStorage.setItem('cart', JSON.stringify(cart));
@@ -76,5 +77,3 @@ function redirectToCheckout() {
   // Redirect to checkout.html
   window.location.href = "checkout.html";
 }
-
-
