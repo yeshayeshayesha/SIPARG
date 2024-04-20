@@ -47,7 +47,7 @@
     padding: 10px;
     color: white;
     position: fixed;
-    left: 170vh;
+    left: 120vh;
     bottom: 3vh;
     overflow-y: scroll;
     flex-direction: column-reverse;
