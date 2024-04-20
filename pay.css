@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+}
+
+.thing{
+
+    border: 1px solid black;
+    width: 35vh;
+    justify-content: space-between;
+    position: relative;
+    top: 15px;
+    left: 85vh;
+}

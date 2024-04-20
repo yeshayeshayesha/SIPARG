@@ -27,12 +27,6 @@ function redirectDrink(){
 total = 0;
 let items = [];
 
-function buttonCreation(){
-  var newbutton = document.createElement('button');
-  newbutton.textContent = "X";
-  newbutton.value = 0;
-}
-
 function orderItem(item, price) {
   total += price;
   items.push({ item: item, price: price });
